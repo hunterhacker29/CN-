@@ -1,0 +1,509 @@
+root@HPVICTUS15:/home/kali# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.226.110  netmask 255.255.240.0  broadcast 192.168.239.255
+        inet6 fe80::215:5dff:fec1:68c7  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:c1:68:c7  txqueuelen 1000  (Ethernet)
+        RX packets 310  bytes 258357 (258.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4281  bytes 284819 (284.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4059  bytes 176741 (176.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4059  bytes 176741 (176.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@HPVICTUS15:/home/kali# iwconfig
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+root@HPVICTUS15:/home/kali# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+HPVICTUS15.mshome.net    ether   00:15:5d:db:41:ee   C                     eth0
+root@HPVICTUS15:/home/kali# arp -a
+HPVICTUS15.mshome.net (192.168.224.1) at 00:15:5d:db:41:ee [ether] on eth0
+root@HPVICTUS15:/home/kali# arp -a 192.168.0.115
+arp: in 1 entries no match found.
+root@HPVICTUS15:/home/kali# hostname
+HPVICTUS15
+root@HPVICTUS15:/home/kali# systeminfo
+systeminfo: command not found
+root@HPVICTUS15:/home/kali# arp -a
+HPVICTUS15.mshome.net (192.168.224.1) at 00:15:5d:db:41:ee [ether] on eth0
+root@HPVICTUS15:/home/kali# netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    315      /run/user/0/systemd/notify
+unix  2      [ ]         DGRAM                    23561    /var/run/chrony/chronyd.sock
+unix  2      [ ]         DGRAM                    21823    /run/user/1000/systemd/notify
+unix  3      [ ]         DGRAM      CONNECTED     21577    /run/systemd/notify
+unix  2      [ ]         DGRAM                    21586    /run/systemd/journal/syslog
+unix  12     [ ]         DGRAM      CONNECTED     21594    /run/systemd/journal/dev-log
+unix  8      [ ]         DGRAM      CONNECTED     21596    /run/systemd/journal/socket
+unix  3      [ ]         STREAM     CONNECTED     23574
+unix  3      [ ]         STREAM     CONNECTED     18743    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     24710
+unix  3      [ ]         STREAM     CONNECTED     21868
+unix  3      [ ]         STREAM     CONNECTED     27768    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     23802
+unix  2      [ ]         DGRAM      CONNECTED     26698
+unix  3      [ ]         STREAM     CONNECTED     19805
+unix  2      [ ]         DGRAM      CONNECTED     35648
+unix  2      [ ]         DGRAM      CONNECTED     20707
+unix  3      [ ]         DGRAM      CONNECTED     21578
+unix  3      [ ]         STREAM     CONNECTED     22686    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22668
+unix  3      [ ]         STREAM     CONNECTED     25703
+unix  3      [ ]         DGRAM      CONNECTED     20583
+unix  3      [ ]         STREAM     CONNECTED     23804
+unix  3      [ ]         STREAM     CONNECTED     26728    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     22662
+unix  3      [ ]         STREAM     CONNECTED     20716    /tmp/dbus-fXM389LsQs
+unix  3      [ ]         STREAM     CONNECTED     23752    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21869    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     18742    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19856    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24714
+unix  3      [ ]         STREAM     CONNECTED     19909
+unix  3      [ ]         STREAM     CONNECTED     25784
+unix  3      [ ]         STREAM     CONNECTED     33692    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     24720
+unix  3      [ ]         STREAM     CONNECTED     18739
+unix  3      [ ]         STREAM     CONNECTED     19784
+unix  3      [ ]         STREAM     CONNECTED     23575
+unix  2      [ ]         DGRAM      CONNECTED     309
+unix  3      [ ]         STREAM     CONNECTED     23749    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    18732
+unix  3      [ ]         STREAM     CONNECTED     18741    /run/user/1000/bus
+unix  2      [ ]         DGRAM      CONNECTED     19882
+unix  3      [ ]         STREAM     CONNECTED     20622    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    27735
+unix  3      [ ]         STREAM     CONNECTED     23699
+unix  3      [ ]         STREAM     CONNECTED     19855
+unix  3      [ ]         STREAM     CONNECTED     19806
+unix  3      [ ]         STREAM     CONNECTED     23765    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23753    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20663
+unix  3      [ ]         STREAM     CONNECTED     19883    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     21817
+unix  3      [ ]         DGRAM      CONNECTED     20582
+unix  3      [ ]         STREAM     CONNECTED     23803
+unix  3      [ ]         STREAM     CONNECTED     27736
+unix  3      [ ]         STREAM     CONNECTED     22687    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22661    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25803
+unix  3      [ ]         STREAM     CONNECTED     18689
+unix  3      [ ]         DGRAM      CONNECTED     22776
+unix  3      [ ]         STREAM     CONNECTED     23776
+unix  3      [ ]         STREAM     CONNECTED     24725
+unix  3      [ ]         STREAM     CONNECTED     17616    /tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     24587    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27738
+unix  3      [ ]         STREAM     CONNECTED     21686
+unix  3      [ ]         STREAM     CONNECTED     24713
+unix  3      [ ]         STREAM     CONNECTED     320
+unix  3      [ ]         STREAM     CONNECTED     25797
+unix  2      [ ]         DGRAM      CONNECTED     18610
+unix  2      [ ]         STREAM     CONNECTED     19780
+unix  2      [ ]         DGRAM      CONNECTED     299
+unix  3      [ ]         STREAM     CONNECTED     27744
+unix  3      [ ]         STREAM     CONNECTED     27708    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25606
+unix  3      [ ]         STREAM     CONNECTED     19854
+unix  3      [ ]         STREAM     CONNECTED     22691    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19888    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25708
+unix  3      [ ]         STREAM     CONNECTED     181
+unix  3      [ ]         STREAM     CONNECTED     19785
+unix  3      [ ]         DGRAM      CONNECTED     317
+unix  3      [ ]         STREAM     CONNECTED     26776
+unix  3      [ ]         STREAM     CONNECTED     18740
+unix  3      [ ]         STREAM     CONNECTED     21799
+unix  3      [ ]         STREAM     CONNECTED     20632
+unix  3      [ ]         STREAM     CONNECTED     125      /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25782
+unix  3      [ ]         DGRAM      CONNECTED     21825
+unix  3      [ ]         STREAM     CONNECTED     19807
+unix  3      [ ]         STREAM     CONNECTED     21828
+unix  3      [ ]         STREAM     CONNECTED     19903    /mnt/wslg/PulseAudioRDPSink
+unix  3      [ ]         STREAM     CONNECTED     24628
+unix  3      [ ]         STREAM     CONNECTED     23606
+unix  3      [ ]         STREAM     CONNECTED     72
+unix  3      [ ]         STREAM     CONNECTED     26704
+unix  3      [ ]         DGRAM      CONNECTED     22777
+unix  2      [ ]         DGRAM      CONNECTED     21809
+unix  2      [ ]         DGRAM      CONNECTED     20580
+unix  3      [ ]         STREAM     CONNECTED     185      /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18621
+unix  3      [ ]         STREAM     CONNECTED     21870    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     27743
+unix  3      [ ]         STREAM     CONNECTED     19889    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     27707    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25607
+unix  2      [ ]         DGRAM                    64729
+unix  2      [ ]         DGRAM      CONNECTED     50
+unix  3      [ ]         STREAM     CONNECTED     24606    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     288
+unix  3      [ ]         STREAM     CONNECTED     23672
+unix  3      [ ]         STREAM     CONNECTED     19804
+unix  2      [ ]         DGRAM      CONNECTED     25748
+unix  3      [ ]         DGRAM      CONNECTED     21579
+unix  3      [ ]         DGRAM      CONNECTED     316
+unix  3      [ ]         STREAM     CONNECTED     25777
+unix  3      [ ]         STREAM     CONNECTED     27696    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     21824
+unix  3      [ ]         STREAM     CONNECTED     27737
+unix  3      [ ]         STREAM     CONNECTED     27658    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25804
+unix  3      [ ]         STREAM     CONNECTED     25785
+unix  3      [ ]         STREAM     CONNECTED     19873    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     20566
+unix  3      [ ]         STREAM     CONNECTED     22793
+unix  3      [ ]         STREAM     CONNECTED     27706    /run/systemd/journal/stdout
+root@HPVICTUS15:/home/kali# netstat www.google.com
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    315      /run/user/0/systemd/notify
+unix  2      [ ]         DGRAM                    23561    /var/run/chrony/chronyd.sock
+unix  2      [ ]         DGRAM                    21823    /run/user/1000/systemd/notify
+unix  3      [ ]         DGRAM      CONNECTED     21577    /run/systemd/notify
+unix  2      [ ]         DGRAM                    21586    /run/systemd/journal/syslog
+unix  12     [ ]         DGRAM      CONNECTED     21594    /run/systemd/journal/dev-log
+unix  8      [ ]         DGRAM      CONNECTED     21596    /run/systemd/journal/socket
+unix  3      [ ]         STREAM     CONNECTED     23574
+unix  3      [ ]         STREAM     CONNECTED     18743    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     24710
+unix  3      [ ]         STREAM     CONNECTED     21868
+unix  3      [ ]         STREAM     CONNECTED     27768    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     23802
+unix  2      [ ]         DGRAM      CONNECTED     26698
+unix  3      [ ]         STREAM     CONNECTED     19805
+unix  2      [ ]         DGRAM      CONNECTED     35648
+unix  2      [ ]         DGRAM      CONNECTED     20707
+unix  3      [ ]         DGRAM      CONNECTED     21578
+unix  3      [ ]         STREAM     CONNECTED     22686    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22668
+unix  3      [ ]         STREAM     CONNECTED     25703
+unix  3      [ ]         DGRAM      CONNECTED     20583
+unix  3      [ ]         STREAM     CONNECTED     23804
+unix  3      [ ]         STREAM     CONNECTED     26728    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     22662
+unix  3      [ ]         STREAM     CONNECTED     20716    /tmp/dbus-fXM389LsQs
+unix  3      [ ]         STREAM     CONNECTED     23752    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21869    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     18742    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19856    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24714
+unix  3      [ ]         STREAM     CONNECTED     19909
+unix  3      [ ]         STREAM     CONNECTED     25784
+unix  3      [ ]         STREAM     CONNECTED     33692    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     24720
+unix  3      [ ]         STREAM     CONNECTED     18739
+unix  3      [ ]         STREAM     CONNECTED     19784
+unix  3      [ ]         STREAM     CONNECTED     23575
+unix  2      [ ]         DGRAM      CONNECTED     309
+unix  3      [ ]         STREAM     CONNECTED     23749    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    18732
+unix  3      [ ]         STREAM     CONNECTED     18741    /run/user/1000/bus
+unix  2      [ ]         DGRAM      CONNECTED     19882
+unix  3      [ ]         STREAM     CONNECTED     20622    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    27735
+unix  3      [ ]         STREAM     CONNECTED     23699
+unix  3      [ ]         STREAM     CONNECTED     19855
+unix  3      [ ]         STREAM     CONNECTED     19806
+unix  3      [ ]         STREAM     CONNECTED     23765    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23753    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20663
+unix  3      [ ]         STREAM     CONNECTED     19883    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     21817
+unix  3      [ ]         DGRAM      CONNECTED     20582
+unix  3      [ ]         STREAM     CONNECTED     23803
+unix  3      [ ]         STREAM     CONNECTED     27736
+unix  3      [ ]         STREAM     CONNECTED     22687    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22661    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25803
+unix  3      [ ]         STREAM     CONNECTED     18689
+unix  3      [ ]         DGRAM      CONNECTED     22776
+unix  3      [ ]         STREAM     CONNECTED     23776
+unix  3      [ ]         STREAM     CONNECTED     24725
+unix  3      [ ]         STREAM     CONNECTED     17616    /tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     24587    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     27738
+unix  3      [ ]         STREAM     CONNECTED     21686
+unix  3      [ ]         STREAM     CONNECTED     24713
+unix  3      [ ]         STREAM     CONNECTED     320
+unix  3      [ ]         STREAM     CONNECTED     25797
+unix  2      [ ]         DGRAM      CONNECTED     18610
+unix  2      [ ]         STREAM     CONNECTED     19780
+unix  2      [ ]         DGRAM      CONNECTED     299
+unix  3      [ ]         STREAM     CONNECTED     27744
+unix  3      [ ]         STREAM     CONNECTED     27708    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25606
+unix  3      [ ]         STREAM     CONNECTED     19854
+unix  3      [ ]         STREAM     CONNECTED     22691    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19888    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25708
+unix  3      [ ]         STREAM     CONNECTED     181
+unix  3      [ ]         STREAM     CONNECTED     19785
+unix  3      [ ]         DGRAM      CONNECTED     317
+unix  3      [ ]         STREAM     CONNECTED     26776
+unix  3      [ ]         STREAM     CONNECTED     18740
+unix  3      [ ]         STREAM     CONNECTED     21799
+unix  3      [ ]         STREAM     CONNECTED     20632
+unix  3      [ ]         STREAM     CONNECTED     125      /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25782
+unix  3      [ ]         DGRAM      CONNECTED     21825
+unix  3      [ ]         STREAM     CONNECTED     19807
+unix  3      [ ]         STREAM     CONNECTED     21828
+unix  3      [ ]         STREAM     CONNECTED     19903    /mnt/wslg/PulseAudioRDPSink
+unix  3      [ ]         STREAM     CONNECTED     24628
+unix  3      [ ]         STREAM     CONNECTED     23606
+unix  3      [ ]         STREAM     CONNECTED     72
+unix  3      [ ]         STREAM     CONNECTED     26704
+unix  3      [ ]         DGRAM      CONNECTED     22777
+unix  2      [ ]         DGRAM      CONNECTED     21809
+unix  2      [ ]         DGRAM      CONNECTED     20580
+unix  3      [ ]         STREAM     CONNECTED     185      /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18621
+unix  3      [ ]         STREAM     CONNECTED     21870    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     27743
+unix  3      [ ]         STREAM     CONNECTED     19889    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     27707    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25607
+unix  2      [ ]         DGRAM                    64729
+unix  2      [ ]         DGRAM      CONNECTED     50
+unix  3      [ ]         STREAM     CONNECTED     24606    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     288
+unix  3      [ ]         STREAM     CONNECTED     23672
+unix  3      [ ]         STREAM     CONNECTED     19804
+unix  2      [ ]         DGRAM      CONNECTED     25748
+unix  3      [ ]         DGRAM      CONNECTED     21579
+unix  3      [ ]         DGRAM      CONNECTED     316
+unix  3      [ ]         STREAM     CONNECTED     25777
+unix  3      [ ]         STREAM     CONNECTED     27696    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     21824
+unix  3      [ ]         STREAM     CONNECTED     27737
+unix  3      [ ]         STREAM     CONNECTED     27658    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25804
+unix  3      [ ]         STREAM     CONNECTED     25785
+unix  3      [ ]         STREAM     CONNECTED     19873    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     20566
+unix  3      [ ]         STREAM     CONNECTED     22793
+unix  3      [ ]         STREAM     CONNECTED     27706    /run/systemd/journal/stdout
+root@HPVICTUS15:/home/kali# nslookup www.google.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 142.250.192.132
+Name:   www.google.com
+Address: 2404:6800:4009:82b::2004
+
+root@HPVICTUS15:/home/kali# ping www.google.com -t
+ping: option requires an argument -- 't'
+
+Usage
+  ping [options] <destination>
+
+Options:
+  <destination>      dns name or ip address
+  -a                 use audible ping
+  -A                 use adaptive ping
+  -B                 sticky source address
+  -c <count>         stop after <count> replies
+  -D                 print timestamps
+  -d                 use SO_DEBUG socket option
+  -f                 flood ping
+  -h                 print help and exit
+  -I <interface>     either interface name or address
+  -i <interval>      seconds between sending each packet
+  -L                 suppress loopback of multicast packets
+  -l <preload>       send <preload> number of packages while waiting replies
+  -m <mark>          tag the packets going out
+  -M <pmtud opt>     define mtu discovery, can be one of <do|dont|want>
+  -n                 no dns name resolution
+  -O                 report outstanding replies
+  -p <pattern>       contents of padding byte
+  -q                 quiet output
+  -Q <tclass>        use quality of service <tclass> bits
+  -s <size>          use <size> as number of data bytes to be sent
+  -S <size>          use <size> as SO_SNDBUF socket option value
+  -t <ttl>           define time to live
+  -U                 print user-to-user latency
+  -v                 verbose output
+  -V                 print version and exit
+  -w <deadline>      reply wait <deadline> in seconds
+  -W <timeout>       time to wait for response
+
+IPv4 options:
+  -4                 use IPv4
+  -b                 allow pinging broadcast
+  -R                 record route
+  -T <timestamp>     define timestamp, can be one of <tsonly|tsandaddr|tsprespec>
+
+IPv6 options:
+  -6                 use IPv6
+  -F <flowlabel>     define flow label, default is random
+  -N <nodeinfo opt>  use icmp6 node info query, try <help> as argument
+
+For more details see ping(8).
+root@HPVICTUS15:/home/kali# ping www.google.com
+^C
+root@HPVICTUS15:/home/kali# ping -t www.google.com
+ping: invalid argument: 'www.google.com'
+root@HPVICTUS15:/home/kali# nmap
+Nmap 7.80 ( https://nmap.org )
+Usage: nmap [Scan Type(s)] [Options] {target specification}
+TARGET SPECIFICATION:
+  Can pass hostnames, IP addresses, networks, etc.
+  Ex: scanme.nmap.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
+  -iL <inputfilename>: Input from list of hosts/networks
+  -iR <num hosts>: Choose random targets
+  --exclude <host1[,host2][,host3],...>: Exclude hosts/networks
+  --excludefile <exclude_file>: Exclude list from file
+HOST DISCOVERY:
+  -sL: List Scan - simply list targets to scan
+  -sn: Ping Scan - disable port scan
+  -Pn: Treat all hosts as online -- skip host discovery
+  -PS/PA/PU/PY[portlist]: TCP SYN/ACK, UDP or SCTP discovery to given ports
+  -PE/PP/PM: ICMP echo, timestamp, and netmask request discovery probes
+  -PO[protocol list]: IP Protocol Ping
+  -n/-R: Never do DNS resolution/Always resolve [default: sometimes]
+  --dns-servers <serv1[,serv2],...>: Specify custom DNS servers
+  --system-dns: Use OS's DNS resolver
+  --traceroute: Trace hop path to each host
+SCAN TECHNIQUES:
+  -sS/sT/sA/sW/sM: TCP SYN/Connect()/ACK/Window/Maimon scans
+  -sU: UDP Scan
+  -sN/sF/sX: TCP Null, FIN, and Xmas scans
+  --scanflags <flags>: Customize TCP scan flags
+  -sI <zombie host[:probeport]>: Idle scan
+  -sY/sZ: SCTP INIT/COOKIE-ECHO scans
+  -sO: IP protocol scan
+  -b <FTP relay host>: FTP bounce scan
+PORT SPECIFICATION AND SCAN ORDER:
+  -p <port ranges>: Only scan specified ports
+    Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+  --exclude-ports <port ranges>: Exclude the specified ports from scanning
+  -F: Fast mode - Scan fewer ports than the default scan
+  -r: Scan ports consecutively - don't randomize
+  --top-ports <number>: Scan <number> most common ports
+  --port-ratio <ratio>: Scan ports more common than <ratio>
+SERVICE/VERSION DETECTION:
+  -sV: Probe open ports to determine service/version info
+  --version-intensity <level>: Set from 0 (light) to 9 (try all probes)
+  --version-light: Limit to most likely probes (intensity 2)
+  --version-all: Try every single probe (intensity 9)
+  --version-trace: Show detailed version scan activity (for debugging)
+SCRIPT SCAN:
+  -sC: equivalent to --script=default
+  --script=<Lua scripts>: <Lua scripts> is a comma separated list of
+           directories, script-files or script-categories
+  --script-args=<n1=v1,[n2=v2,...]>: provide arguments to scripts
+  --script-args-file=filename: provide NSE script args in a file
+  --script-trace: Show all data sent and received
+  --script-updatedb: Update the script database.
+  --script-help=<Lua scripts>: Show help about scripts.
+           <Lua scripts> is a comma-separated list of script-files or
+           script-categories.
+OS DETECTION:
+  -O: Enable OS detection
+  --osscan-limit: Limit OS detection to promising targets
+  --osscan-guess: Guess OS more aggressively
+TIMING AND PERFORMANCE:
+  Options which take <time> are in seconds, or append 'ms' (milliseconds),
+  's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
+  -T<0-5>: Set timing template (higher is faster)
+  --min-hostgroup/max-hostgroup <size>: Parallel host scan group sizes
+  --min-parallelism/max-parallelism <numprobes>: Probe parallelization
+  --min-rtt-timeout/max-rtt-timeout/initial-rtt-timeout <time>: Specifies
+      probe round trip time.
+  --max-retries <tries>: Caps number of port scan probe retransmissions.
+  --host-timeout <time>: Give up on target after this long
+  --scan-delay/--max-scan-delay <time>: Adjust delay between probes
+  --min-rate <number>: Send packets no slower than <number> per second
+  --max-rate <number>: Send packets no faster than <number> per second
+FIREWALL/IDS EVASION AND SPOOFING:
+  -f; --mtu <val>: fragment packets (optionally w/given MTU)
+  -D <decoy1,decoy2[,ME],...>: Cloak a scan with decoys
+  -S <IP_Address>: Spoof source address
+  -e <iface>: Use specified interface
+  -g/--source-port <portnum>: Use given port number
+  --proxies <url1,[url2],...>: Relay connections through HTTP/SOCKS4 proxies
+  --data <hex string>: Append a custom payload to sent packets
+  --data-string <string>: Append a custom ASCII string to sent packets
+  --data-length <num>: Append random data to sent packets
+  --ip-options <options>: Send packets with specified ip options
+  --ttl <val>: Set IP time-to-live field
+  --spoof-mac <mac address/prefix/vendor name>: Spoof your MAC address
+  --badsum: Send packets with a bogus TCP/UDP/SCTP checksum
+OUTPUT:
+  -oN/-oX/-oS/-oG <file>: Output scan in normal, XML, s|<rIpt kIddi3,
+     and Grepable format, respectively, to the given filename.
+  -oA <basename>: Output in the three major formats at once
+  -v: Increase verbosity level (use -vv or more for greater effect)
+  -d: Increase debugging level (use -dd or more for greater effect)
+  --reason: Display the reason a port is in a particular state
+  --open: Only show open (or possibly open) ports
+  --packet-trace: Show all packets sent and received
+  --iflist: Print host interfaces and routes (for debugging)
+  --append-output: Append to rather than clobber specified output files
+  --resume <filename>: Resume an aborted scan
+  --stylesheet <path/URL>: XSL stylesheet to transform XML output to HTML
+  --webxml: Reference stylesheet from Nmap.Org for more portable XML
+  --no-stylesheet: Prevent associating of XSL stylesheet w/XML output
+MISC:
+  -6: Enable IPv6 scanning
+  -A: Enable OS detection, version detection, script scanning, and traceroute
+  --datadir <dirname>: Specify custom Nmap data file location
+  --send-eth/--send-ip: Send using raw ethernet frames or IP packets
+  --privileged: Assume that the user is fully privileged
+  --unprivileged: Assume the user lacks raw socket privileges
+  -V: Print version number
+  -h: Print this help summary page.
+EXAMPLES:
+  nmap -v -A scanme.nmap.org
+  nmap -v -sn 192.168.0.0/16 10.0.0.0/8
+  nmap -v -iR 10000 -Pn -p 80
+SEE THE MAN PAGE (https://nmap.org/book/man.html) FOR MORE OPTIONS AND EXAMPLES
+root@HPVICTUS15:/home/kali# tracert
+Command 'tracert' not found, did you mean:
+  command 'tracer' from deb pvm-dev (3.4.6-3.2)
+  command 'tracert6' from deb ndisc6 (1.0.4-2ubuntu2)
+Try: apt install <deb name>
+root@HPVICTUS15:/home/kali# getmac
+getmac: command not found
+root@HPVICTUS15:/home/kali# telnet
+telnet> ^C
+root@HPVICTUS15:/home/kali# wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+root@HPVICTUS15:/home/kali# pathping
+pathping: command not found
+root@HPVICTUS15:/home/kali# pathping -q
+pathping: command not found
+root@HPVICTUS15:/home/kali# pathping google.com
+pathping: command not found
+root@HPVICTUS15:/home/kali# nbstat
+Command 'nbstat' not found, did you mean:
+  command 'bnstat' from deb pvpgn (1.8.5-2.1ubuntu1)
+  command 'fbstat' from deb firebird3.0-utils (3.0.8.33535.ds4-1ubuntu2)
+  command 'nstat' from deb iproute2 (5.15.0-1ubuntu2)
+  command 'gbstat' from deb gbutils (6.0-1build2)
+  command 'ibstat' from deb infiniband-diags (39.0-1)
+Try: apt install <deb name>
+root@HPVICTUS15:/home/kali#
